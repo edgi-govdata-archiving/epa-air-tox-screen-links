@@ -30,6 +30,7 @@ def check_urls_from_stdin():
             is_archived = data.get("archived_snapshots") and True or False
             d = {"url": url, "archived": is_archived, "data": data}
             print(json.dumps(d))
+            sys.stdout.flush()
 
 
 # Example usage
